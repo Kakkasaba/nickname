@@ -1,5 +1,6 @@
 package org.uminokun.nickname.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,7 +27,7 @@ public class editname implements CommandExecutor
         {
             commandSender.sendMessage(ChatColor.RED + "ニックネームは最大文字16文字です");
         }
-        final Player p = (Player) commandSender;
+        final Player p = Bukkit.getPlayer("mcid");
         final String name = ChatColor.translateAlternateColorCodes('&', strings[0]);
 
         p.setPlayerListName(name);
