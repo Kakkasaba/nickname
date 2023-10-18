@@ -1,0 +1,4 @@
+name: nickname
+version: '${project.version}'
+main: org.uminokun.nickname.Nickname
+api-version: '1.20'
