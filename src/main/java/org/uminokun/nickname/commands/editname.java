@@ -12,6 +12,11 @@ public class editname implements CommandExecutor
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
     {
+        if(!commandSender.isOp())
+        {
+            commandSender.sendMessage(ChatColor.RED + "権限がありません。");
+            return true;
+        }
         if (!(commandSender instanceof Player))
         {
             commandSender.sendMessage(ChatColor.RED + "プレイヤーのみでしか実行できません");
