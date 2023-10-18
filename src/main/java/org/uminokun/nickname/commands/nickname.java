@@ -31,7 +31,7 @@ public class nickname implements CommandExecutor
 
         p.setPlayerListName(name);
         p.setDisplayName(name);
-        commandSender.sendMessage(ChatColor.WHITE + "あなたのニックネームを　" + ChatColor.RESET + name + ChatColor.WHITE + " に設定しました");
+        commandSender.sendMessage(ChatColor.WHITE + "あなたのニックネームを " + ChatColor.RESET + name + ChatColor.WHITE + " に設定しました");
 
         return true;
     }
