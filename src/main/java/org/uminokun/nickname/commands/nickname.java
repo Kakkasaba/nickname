@@ -11,23 +11,23 @@ public class nickname implements CommandExecutor
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
     {
-        if (!(sender instanceof Player))
+        if (!(commandSender instanceof Player))
         {
             commandSender.sendMessage(ChatColor.RED + "プレイヤーのみでしか実行できません");
             return true;
         }
-        if (args.length > 1)
+        if (strings.length > 1)
         {
             commandSender.sendMessage(ChatColor.RED + "引数が不明です");
             return true;
         }
 
-        if (args[0].length() > 16)
+        if (strings[0].length() > 16)
         {
             commandSender.sendMessage(ChatColor.RED + "ニックネームは最大文字16文字です");
         }
         final Player p = (Player) commandSender;
-        final String name = ChatColor.translateAlternateColorCodes('&', args[0]);
+        final String name = ChatColor.translateAlternateColorCodes('&', strings[0]);
 
         p.setPlayerListName(name);
         p.setDisplayName(name);
