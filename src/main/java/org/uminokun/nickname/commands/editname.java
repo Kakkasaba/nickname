@@ -13,7 +13,7 @@ import java.util.Objects;
 public class editname implements CommandExecutor
 {
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, Command command, String s, String[] strings)
+    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings)
     {
         if(!commandSender.isOp())
         {
