@@ -6,11 +6,14 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Objects;
 
 public class editname implements CommandExecutor
 {
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
+    public boolean onCommand(@NotNull CommandSender commandSender, Command command, String s, String[] strings)
     {
         if(!commandSender.isOp())
         {
@@ -35,7 +38,7 @@ public class editname implements CommandExecutor
         final Player p = Bukkit.getPlayer("mcid");
         final String name = ChatColor.translateAlternateColorCodes('&', strings[0]);
 
-        p.setPlayerListName(name);
+        Objects.requireNonNull(p).setPlayerListName(name);
         p.setDisplayName(name);
         commandSender.sendMessage(ChatColor.WHITE + "あなたのニックネームを " + ChatColor.RESET + name + ChatColor.WHITE + " に設定しました");
 
