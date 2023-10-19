@@ -7,7 +7,3 @@ commands:
     description: ニックネームを変更
     aliases:
       - nick
-  editname:
-    description: 他人のニックネームを変更
-    aliases:
-      - edit
