@@ -5,13 +5,14 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 public class nickname implements CommandExecutor
 {
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings)
+    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings)
     {
-        if (!(commandSender instanceof Player))
+        if (!(commandSender instanceof Player p))
         {
             commandSender.sendMessage(ChatColor.RED + "プレイヤーのみでしか実行できません");
             return true;
@@ -26,7 +27,6 @@ public class nickname implements CommandExecutor
         {
             commandSender.sendMessage(ChatColor.RED + "ニックネームは最大文字16文字です");
         }
-        final Player p = (Player) commandSender;
         final String name = ChatColor.translateAlternateColorCodes('&', strings[0]);
 
         p.setPlayerListName(name);
