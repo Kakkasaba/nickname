@@ -6,7 +6,7 @@
 
     <groupId>org.uminokun</groupId>
     <artifactId>nickname</artifactId>
-    <version>1.5</version>
+    <version>2.0</version>
     <packaging>jar</packaging>
 
     <name>nickname</name>

@@ -4,15 +4,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.uminokun.nickname.commands.editname;
 import org.uminokun.nickname.commands.nickname;
 
-import java.util.Objects;
+import static java.util.Objects.requireNonNull;
 
 public final class Nickname extends JavaPlugin {
 
     @Override
     public void onEnable()
     {
-        Objects.requireNonNull(getCommand("editname")).setExecutor(new editname());
-        Objects.requireNonNull(getCommand("nickname")).setExecutor(new nickname());
+        requireNonNull(getCommand("editname")).setExecutor(new editname());
+        requireNonNull(getCommand("nickname")).setExecutor(new nickname());
     }
 
     @Override
