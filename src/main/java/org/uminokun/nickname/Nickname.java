@@ -10,7 +10,7 @@ public final class Nickname extends JavaPlugin {
     @Override
     public void onEnable()
     {
-        requireNonNull(getCommand("editname")).setExecutor(new editname());
+        requireNonNull(getCommand("nickname")).setExecutor(new nickname());
     }
 
     @Override
